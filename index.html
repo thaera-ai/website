@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#24212E">
+    <meta name="description" content="Thaera brings conversation and coordinated AI agents to your terminal. Currently under development.">
+    <title>Thaera — Taking shape</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --surface: #24212e;
+        --mauve: #533747;
+        --grape: #5f506b;
+        --aqua: #86bbbd;
+        --lilac: #c4aed8;
+        --text: #e8e4ed;
+        --muted: #a6b3be;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100svh;
+        background: var(--surface);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background:
+          radial-gradient(ellipse at 90% 15%, #5f506b55, transparent 55%),
+          radial-gradient(ellipse at 10% 90%, #53374766, transparent 60%);
+        pointer-events: none;
+      }
+
+      .page {
+        width: min(1120px, 100%);
+        min-height: 100svh;
+        margin: auto;
+        padding: 36px 48px 28px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      header, footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 22px;
+        font-weight: 650;
+        letter-spacing: -.8px;
+      }
+
+      .mark { color: var(--aqua); width: 30px; height: 30px; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--aqua);
+        font-size: 11px;
+        letter-spacing: .03em;
+        padding: 9px 12px;
+        border: 1px solid #86bbbd33;
+        border-radius: 999px;
+        background: #86bbbd08;
+      }
+
+      .status::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--aqua);
+        box-shadow: 0 0 12px #86bbbd44;
+      }
+
+      main {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        align-items: center;
+        gap: 64px;
+        padding: 96px 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 24px;
+        color: var(--lilac);
+        font-size: 11px;
+        letter-spacing: .17em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(48px, 6vw, 76px);
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -.055em;
+      }
+
+      h1 span { color: var(--lilac); }
+
+      .intro {
+        max-width: 390px;
+        margin: 28px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .note {
+        max-width: 390px;
+        margin: 32px 0 0;
+        padding-left: 16px;
+        border-left: 2px solid var(--grape);
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .note strong { color: var(--text); font-weight: 500; }
+
+      .terminal {
+        overflow: hidden;
+        border: 1px solid #c4aed826;
+        border-radius: 12px;
+        background: #211e29;
+        box-shadow: 0 24px 80px #17131d55;
+        transform: rotate(-2deg);
+      }
+
+      .terminal-bar {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 15px 18px;
+        border-bottom: 1px solid #c4aed81a;
+        background: #5f506b22;
+      }
+
+      .terminal-bar i {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--mauve);
+      }
+
+      .terminal-bar i:nth-child(2) { background: var(--grape); }
+      .terminal-bar i:nth-child(3) { background: var(--aqua); }
+      .terminal-bar span { margin-left: auto; color: var(--muted); font-size: 10px; }
+
+      .terminal-body { padding: 30px 26px 34px; font-size: 13px; line-height: 1.9; }
+      .terminal-body p { margin: 0; }
+      .prompt { color: var(--aqua); }
+      .terminal-name { color: var(--lilac); }
+      .terminal-copy { margin: 24px 0 !important; color: var(--muted); }
+      .terminal-state { color: var(--aqua); }
+
+      .cursor {
+        display: inline-block;
+        width: 7px;
+        height: 14px;
+        margin-left: 8px;
+        vertical-align: -2px;
+        background: var(--lilac);
+        animation: blink 1.4s steps(1) infinite;
+      }
+
+      footer {
+        border-top: 1px solid #c4aed81a;
+        padding-top: 22px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.6;
+      }
+
+      .footer-note { color: var(--lilac); }
+      @keyframes blink { 50% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+
+      @media (max-width: 760px) {
+        .page { padding: 24px; }
+        main { grid-template-columns: 1fr; gap: 48px; padding: 72px 0 64px; }
+        .intro, .note { max-width: 460px; }
+        .terminal { width: min(100%, 460px); transform: none; }
+        h1 { font-size: clamp(48px, 10vw, 72px); }
+      }
+
+      @media (max-width: 380px) {
+        header { align-items: flex-start; flex-direction: column; gap: 16px; }
+        footer { align-items: flex-start; flex-direction: column; gap: 8px; }
+        .terminal-body { padding: 24px 18px; font-size: 12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="m6 9 7 7-7 7M18 23h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Thaera
+        </div>
+        <span class="status mono">Under development</span>
+      </header>
+
+      <main>
+        <section aria-labelledby="headline">
+          <p class="eyebrow mono">Ideas into coordinated action</p>
+          <h1 id="headline">A little more<br>intelligence.<br><span>A shared direction.</span></h1>
+          <p class="intro">Thaera brings conversation and coordinated AI agents to your terminal, working together toward your objective.</p>
+          <p class="note"><strong>Still taking shape.</strong><br>We’re building thoughtfully. More to share soon.</p>
+        </section>
+
+        <div class="terminal mono" role="img" aria-label="An illustrative Thaera terminal: one objective, a team of agents, currently taking shape.">
+          <div class="terminal-bar" aria-hidden="true">
+            <i></i><i></i><i></i><span>thaera / preview</span>
+          </div>
+          <div class="terminal-body" aria-hidden="true">
+            <p><span class="prompt">❯</span> thaera</p>
+            <p class="terminal-copy"><span class="terminal-name">Hello, I’m Thaera.</span><br>One objective.<br>A team of agents.<br>Room to think together.</p>
+            <p class="terminal-state">Taking shape<span class="cursor"></span></p>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <span>Thaera · A work in progress.</span>
+        <span class="footer-note mono">Built with intention.</span>
+      </footer>
+    </div>
+  </body>
+</html>
