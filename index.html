@@ -4,16 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#24212E">
-    <meta name="description" content="Thaera brings conversation and coordinated AI agents to your terminal. Currently under development.">
-    <title>Thaera — Taking shape</title>
+    <meta name="description" content="Thaera: AI agents in your terminal that poke at things until one finds a way in. Fubá supervises. Still cooking.">
+    <title>Thaera — solving hacking</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%221 -3 18 18%22 shape-rendering=%22crispEdges%22%3E%3Cg fill=%22%23B86D3E%22%3E%3Crect x=%223%22 y=%220%22 width=%221%22 height=%221%22/%3E%3Crect x=%2211%22 y=%220%22 width=%221%22 height=%221%22/%3E%3Crect x=%222%22 y=%221%22 width=%221%22 height=%221%22/%3E%3Crect x=%224%22 y=%221%22 width=%221%22 height=%221%22/%3E%3Crect x=%2210%22 y=%221%22 width=%221%22 height=%221%22/%3E%3Crect x=%2212%22 y=%221%22 width=%221%22 height=%221%22/%3E%3Crect x=%222%22 y=%222%22 width=%221%22 height=%221%22/%3E%3Crect x=%225%22 y=%222%22 width=%225%22 height=%221%22/%3E%3Crect x=%2212%22 y=%222%22 width=%221%22 height=%221%22/%3E%3Crect x=%227%22 y=%226%22 width=%221%22 height=%221%22/%3E%3C/g%3E%3Cg fill=%22%23FFE0AC%22%3E%3Crect x=%223%22 y=%221%22 width=%221%22 height=%221%22/%3E%3Crect x=%2211%22 y=%221%22 width=%221%22 height=%221%22/%3E%3Crect x=%227%22 y=%224%22 width=%221%22 height=%221%22/%3E%3Crect x=%224%22 y=%225%22 width=%223%22 height=%221%22/%3E%3Crect x=%228%22 y=%225%22 width=%223%22 height=%221%22/%3E%3Crect x=%225%22 y=%226%22 width=%222%22 height=%221%22/%3E%3Crect x=%228%22 y=%226%22 width=%222%22 height=%221%22/%3E%3Crect x=%223%22 y=%2211%22 width=%223%22 height=%221%22/%3E%3Crect x=%229%22 y=%2211%22 width=%223%22 height=%221%22/%3E%3C/g%3E%3Cg fill=%22%23E9A05B%22%3E%3Crect x=%223%22 y=%222%22 width=%222%22 height=%221%22/%3E%3Crect x=%2210%22 y=%222%22 width=%222%22 height=%221%22/%3E%3Crect x=%222%22 y=%223%22 width=%2211%22 height=%221%22/%3E%3Crect x=%222%22 y=%224%22 width=%222%22 height=%221%22/%3E%3Crect x=%225%22 y=%224%22 width=%222%22 height=%221%22/%3E%3Crect x=%228%22 y=%224%22 width=%221%22 height=%221%22/%3E%3Crect x=%2210%22 y=%224%22 width=%223%22 height=%221%22/%3E%3Crect x=%222%22 y=%225%22 width=%222%22 height=%221%22/%3E%3Crect x=%2211%22 y=%225%22 width=%222%22 height=%221%22/%3E%3Crect x=%223%22 y=%226%22 width=%222%22 height=%221%22/%3E%3Crect x=%2210%22 y=%226%22 width=%222%22 height=%221%22/%3E%3Crect x=%223%22 y=%2210%22 width=%223%22 height=%221%22/%3E%3Crect x=%229%22 y=%2210%22 width=%223%22 height=%221%22/%3E%3C/g%3E%3Cg fill=%22%23362831%22%3E%3Crect x=%224%22 y=%224%22 width=%221%22 height=%221%22/%3E%3Crect x=%229%22 y=%224%22 width=%221%22 height=%221%22/%3E%3Crect x=%227%22 y=%225%22 width=%221%22 height=%221%22/%3E%3C/g%3E%3Cg fill=%22%23E9A05B%22%3E%3Crect x=%224%22 y=%227%22 width=%227%22 height=%221%22/%3E%3Crect x=%224%22 y=%228%22 width=%227%22 height=%221%22/%3E%3Crect x=%2215%22 y=%228%22 width=%221%22 height=%221%22/%3E%3Crect x=%223%22 y=%229%22 width=%223%22 height=%221%22/%3E%3Crect x=%227%22 y=%229%22 width=%221%22 height=%221%22/%3E%3Crect x=%229%22 y=%229%22 width=%226%22 height=%221%22/%3E%3C/g%3E%3Cg fill=%22%23B86D3E%22%3E%3Crect x=%2215%22 y=%227%22 width=%221%22 height=%221%22/%3E%3Crect x=%223%22 y=%228%22 width=%221%22 height=%221%22/%3E%3Crect x=%2211%22 y=%228%22 width=%221%22 height=%221%22/%3E%3Crect x=%2214%22 y=%228%22 width=%221%22 height=%221%22/%3E%3Crect x=%226%22 y=%229%22 width=%221%22 height=%221%22/%3E%3Crect x=%228%22 y=%229%22 width=%221%22 height=%221%22/%3E%3C/g%3E%3C/svg%3E">
     <style>
       :root {
         color-scheme: dark;
         --surface: #24212e;
         --mauve: #533747;
         --grape: #5f506b;
+        --steel: #76949f;
         --aqua: #86bbbd;
         --lilac: #c4aed8;
+        --cat: #e9a05b;
         --text: #e8e4ed;
         --muted: #a6b3be;
       }
@@ -56,17 +59,13 @@
         gap: 24px;
       }
 
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 22px;
-        font-weight: 650;
-        letter-spacing: -.8px;
-      }
-
-      .mark { color: var(--aqua); width: 30px; height: 30px; }
       .mono { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; }
+      .pixels { display: block; shape-rendering: crispEdges; }
+      .wm { fill: var(--aqua); }
+      .orbit { fill: var(--steel); }
+
+      .site { color: var(--muted); font-size: 13px; }
+      .site b { color: var(--aqua); font-weight: 500; }
 
       .status {
         display: inline-flex;
@@ -86,50 +85,56 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--aqua);
-        box-shadow: 0 0 12px #86bbbd44;
+        background: var(--cat);
+        box-shadow: 0 0 12px #e9a05b66;
       }
 
       main {
         flex: 1;
         display: grid;
-        grid-template-columns: 1.25fr 1fr;
+        grid-template-columns: 1.2fr 1fr;
         align-items: center;
         gap: 64px;
-        padding: 96px 0;
+        padding: 88px 0;
       }
 
-      .eyebrow {
-        margin: 0 0 24px;
-        color: var(--lilac);
-        font-size: 11px;
-        letter-spacing: .17em;
-        text-transform: uppercase;
-      }
+      .logo { width: min(100%, 440px); height: auto; margin: 0 0 40px; }
 
       h1 {
         margin: 0;
-        font-size: clamp(48px, 6vw, 76px);
+        font-size: clamp(48px, 6.4vw, 84px);
         font-weight: 500;
-        line-height: 1.06;
+        line-height: 1;
         letter-spacing: -.055em;
       }
 
       h1 span { color: var(--lilac); }
 
+      .cursor {
+        display: inline-block;
+        width: .09em;
+        height: .8em;
+        margin-left: .08em;
+        vertical-align: -.04em;
+        background: var(--cat);
+        animation: blink 1.4s steps(1) infinite;
+      }
+
       .intro {
-        max-width: 390px;
+        max-width: 420px;
         margin: 28px 0 0;
         color: var(--muted);
         font-size: 17px;
-        line-height: 1.8;
+        line-height: 1.75;
       }
 
+      .intro strong { color: var(--text); font-weight: 500; }
+
       .note {
-        max-width: 390px;
-        margin: 32px 0 0;
+        max-width: 420px;
+        margin: 28px 0 0;
         padding-left: 16px;
-        border-left: 2px solid var(--grape);
+        border-left: 2px solid var(--cat);
         color: var(--muted);
         font-size: 13px;
         line-height: 1.8;
@@ -137,13 +142,50 @@
 
       .note strong { color: var(--text); font-weight: 500; }
 
+      .desk {
+        --cat-w: 126px;
+        position: relative;
+        /* Room for Fubá (18×12 pixels), with the paws resting on the terminal edge. */
+        padding-top: calc(var(--cat-w) * 2 / 3 - 3px);
+        transform: rotate(-2deg);
+      }
+
+      .fuba {
+        position: absolute;
+        top: 0;
+        right: 28px;
+        width: var(--cat-w);
+        height: auto;
+      }
+
+      .bubble {
+        position: absolute;
+        top: 2px;
+        right: 164px;
+        padding: 6px 10px;
+        border-radius: 10px 10px 2px 10px;
+        background: var(--text);
+        color: var(--surface);
+        font-size: 12px;
+        opacity: 0;
+        transform: translateY(4px);
+        transition: opacity .2s, transform .2s;
+        pointer-events: none;
+      }
+
+      .desk:hover .bubble, .desk:focus-within .bubble { opacity: 1; transform: none; }
+
+      .tail-b, .lids { opacity: 0; }
+      .tail-a { animation: tail-a 1.6s steps(1) infinite; }
+      .tail-b { animation: tail-b 1.6s steps(1) infinite; }
+      .lids { animation: lids 4.8s steps(1) infinite; }
+
       .terminal {
         overflow: hidden;
         border: 1px solid #c4aed826;
         border-radius: 12px;
         background: #211e29;
         box-shadow: 0 24px 80px #17131d55;
-        transform: rotate(-2deg);
       }
 
       .terminal-bar {
@@ -166,22 +208,14 @@
       .terminal-bar i:nth-child(3) { background: var(--aqua); }
       .terminal-bar span { margin-left: auto; color: var(--muted); font-size: 10px; }
 
-      .terminal-body { padding: 30px 26px 34px; font-size: 13px; line-height: 1.9; }
+      .terminal-body { padding: 26px 26px 30px; font-size: 13px; line-height: 1.9; }
       .terminal-body p { margin: 0; }
       .prompt { color: var(--aqua); }
-      .terminal-name { color: var(--lilac); }
-      .terminal-copy { margin: 24px 0 !important; color: var(--muted); }
-      .terminal-state { color: var(--aqua); }
-
-      .cursor {
-        display: inline-block;
-        width: 7px;
-        height: 14px;
-        margin-left: 8px;
-        vertical-align: -2px;
-        background: var(--lilac);
-        animation: blink 1.4s steps(1) infinite;
-      }
+      .you { color: var(--text); margin-top: 18px !important; }
+      .reply { color: var(--muted); }
+      .reply b { color: var(--lilac); font-weight: 400; }
+      .spicy { color: var(--cat); }
+      .reply .cursor { width: 7px; height: 14px; margin-left: 8px; vertical-align: -2px; background: var(--lilac); }
 
       footer {
         border-top: 1px solid #c4aed81a;
@@ -191,60 +225,79 @@
         line-height: 1.6;
       }
 
-      .footer-note { color: var(--lilac); }
+      .footer-note { color: var(--cat); }
+
       @keyframes blink { 50% { opacity: 0; } }
-      @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+      @keyframes tail-a { 50% { opacity: 0; } }
+      @keyframes tail-b { 50% { opacity: 1; } }
+      @keyframes lids { 0% { opacity: 0; } 92% { opacity: 1; } 96% { opacity: 0; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cursor, .tail-a, .tail-b, .lids { animation: none; }
+        .bubble { transition: none; }
+      }
 
       @media (max-width: 760px) {
         .page { padding: 24px; }
-        main { grid-template-columns: 1fr; gap: 48px; padding: 72px 0 64px; }
+        main { grid-template-columns: 1fr; gap: 40px; padding: 56px 0 56px; }
+        .logo { margin-bottom: 32px; }
         .intro, .note { max-width: 460px; }
-        .terminal { width: min(100%, 460px); transform: none; }
-        h1 { font-size: clamp(48px, 10vw, 72px); }
+        .desk { width: min(100%, 460px); transform: none; }
+        h1 { font-size: clamp(44px, 13vw, 72px); }
       }
 
       @media (max-width: 380px) {
         header { align-items: flex-start; flex-direction: column; gap: 16px; }
         footer { align-items: flex-start; flex-direction: column; gap: 8px; }
-        .terminal-body { padding: 24px 18px; font-size: 12px; }
+        .terminal-body { padding: 22px 18px; font-size: 12px; }
+        .desk { --cat-w: 108px; }
+        .fuba { right: 16px; }
+        .bubble { right: 132px; }
       }
     </style>
   </head>
   <body>
     <div class="page">
       <header>
-        <div class="brand">
-          <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <path d="m6 9 7 7-7 7M18 23h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Thaera
-        </div>
-        <span class="status mono">Under development</span>
+        <span class="site mono"><b>❯</b> thaera.ai</span>
+        <span class="status mono">Still cooking</span>
       </header>
 
       <main>
         <section aria-labelledby="headline">
-          <p class="eyebrow mono">Ideas into coordinated action</p>
-          <h1 id="headline">Where small<br>weaknesses become<br><span>a way in</span></h1>
-          <p class="intro">Thaera brings conversation and coordinated AI agents to your terminal, working together toward your objective.</p>
-          <p class="note"><strong>Still taking shape.</strong><br>We’re building thoughtfully. More to share soon.</p>
+          <svg class="logo pixels" viewBox="0 0 80 24" role="img" aria-label="Thaera"><g class="orbit"><rect x="71" y="1" width="1" height="1"/><rect x="71" y="2" width="2" height="1"/><rect x="67" y="3" width="7" height="1"/><rect x="57" y="4" width="21" height="1"/><rect x="50" y="5" width="10" height="1"/><rect x="71" y="5" width="8" height="1"/><rect x="45" y="6" width="7" height="1"/><rect x="71" y="6" width="2" height="1"/><rect x="76" y="6" width="4" height="1"/><rect x="41" y="7" width="5" height="1"/><rect x="71" y="7" width="1" height="1"/><rect x="76" y="7" width="3" height="1"/><rect x="39" y="8" width="2" height="1"/><rect x="75" y="8" width="3" height="1"/><rect x="73" y="9" width="4" height="1"/><rect x="72" y="10" width="3" height="1"/><rect x="70" y="11" width="3" height="1"/><rect x="65" y="13" width="2" height="1"/><rect x="10" y="14" width="2" height="1"/><rect x="61" y="14" width="3" height="1"/><rect x="8" y="15" width="3" height="1"/><rect x="59" y="15" width="3" height="1"/><rect x="6" y="16" width="3" height="1"/><rect x="56" y="16" width="1" height="1"/><rect x="4" y="17" width="3" height="1"/><rect x="2" y="18" width="4" height="1"/><rect x="40" y="18" width="4" height="1"/><rect x="1" y="19" width="4" height="1"/><rect x="35" y="19" width="7" height="1"/><rect x="1" y="20" width="4" height="1"/><rect x="28" y="20" width="9" height="1"/><rect x="0" y="21" width="8" height="1"/><rect x="19" y="21" width="12" height="1"/><rect x="1" y="22" width="24" height="1"/><rect x="5" y="23" width="12" height="1"/></g><g class="wm"><rect x="8" y="9" width="13" height="1"/><rect x="22" y="9" width="3" height="1"/><rect x="29" y="9" width="3" height="1"/><rect x="37" y="9" width="1" height="1"/><rect x="43" y="9" width="8" height="1"/><rect x="52" y="9" width="9" height="1"/><rect x="68" y="9" width="1" height="1"/><rect x="8" y="10" width="1" height="1"/><rect x="13" y="10" width="3" height="1"/><rect x="20" y="10" width="1" height="1"/><rect x="22" y="10" width="3" height="1"/><rect x="29" y="10" width="3" height="1"/><rect x="36" y="10" width="2" height="1"/><rect x="43" y="10" width="3" height="1"/><rect x="52" y="10" width="3" height="1"/><rect x="58" y="10" width="4" height="1"/><rect x="67" y="10" width="2" height="1"/><rect x="13" y="11" width="3" height="1"/><rect x="21" y="11" width="4" height="1"/><rect x="28" y="11" width="4" height="1"/><rect x="35" y="11" width="4" height="1"/><rect x="43" y="11" width="3" height="1"/><rect x="52" y="11" width="3" height="1"/><rect x="58" y="11" width="4" height="1"/><rect x="66" y="11" width="4" height="1"/><rect x="12" y="12" width="4" height="1"/><rect x="21" y="12" width="3" height="1"/><rect x="28" y="12" width="3" height="1"/><rect x="34" y="12" width="1" height="1"/><rect x="36" y="12" width="3" height="1"/><rect x="42" y="12" width="4" height="1"/><rect x="52" y="12" width="3" height="1"/><rect x="58" y="12" width="3" height="1"/><rect x="65" y="12" width="1" height="1"/><rect x="67" y="12" width="3" height="1"/><rect x="12" y="13" width="3" height="1"/><rect x="21" y="13" width="10" height="1"/><rect x="33" y="13" width="1" height="1"/><rect x="36" y="13" width="4" height="1"/><rect x="42" y="13" width="7" height="1"/><rect x="51" y="13" width="9" height="1"/><rect x="64" y="13" width="1" height="1"/><rect x="67" y="13" width="3" height="1"/><rect x="12" y="14" width="3" height="1"/><rect x="20" y="14" width="4" height="1"/><rect x="28" y="14" width="3" height="1"/><rect x="32" y="14" width="2" height="1"/><rect x="37" y="14" width="3" height="1"/><rect x="42" y="14" width="3" height="1"/><rect x="51" y="14" width="3" height="1"/><rect x="56" y="14" width="3" height="1"/><rect x="68" y="14" width="3" height="1"/><rect x="11" y="15" width="4" height="1"/><rect x="20" y="15" width="3" height="1"/><rect x="27" y="15" width="3" height="1"/><rect x="31" y="15" width="2" height="1"/><rect x="37" y="15" width="3" height="1"/><rect x="42" y="15" width="3" height="1"/><rect x="51" y="15" width="3" height="1"/><rect x="56" y="15" width="3" height="1"/><rect x="62" y="15" width="1" height="1"/><rect x="68" y="15" width="3" height="1"/><rect x="11" y="16" width="3" height="1"/><rect x="20" y="16" width="3" height="1"/><rect x="27" y="16" width="3" height="1"/><rect x="31" y="16" width="1" height="1"/><rect x="37" y="16" width="7" height="1"/><rect x="48" y="16" width="6" height="1"/><rect x="57" y="16" width="6" height="1"/><rect x="68" y="16" width="4" height="1"/><rect x="10" y="17" width="4" height="1"/><rect x="19" y="17" width="4" height="1"/><rect x="26" y="17" width="6" height="1"/><rect x="37" y="17" width="17" height="1"/><rect x="58" y="17" width="4" height="1"/><rect x="68" y="17" width="4" height="1"/></g></svg>
+          <h1 id="headline">solving <span>hacking.</span><span class="cursor" aria-hidden="true"></span></h1>
+          <p class="intro">Every system has <strong>a way in</strong>.<br>We’d like to find it first.</p>
+          <p class="note"><strong>Not out yet.</strong><br>We’re still building it. Fubá is mostly supervising.</p>
         </section>
 
-        <div class="terminal mono" role="img" aria-label="An illustrative Thaera terminal asking: What would an attacker need next? Taking shape.">
-          <div class="terminal-bar" aria-hidden="true">
-            <i></i><i></i><i></i><span>thaera / preview</span>
-          </div>
-          <div class="terminal-body" aria-hidden="true">
-            <p><span class="prompt">❯</span> thaera</p>
-            <p class="terminal-copy terminal-name">What would an attacker need next?</p>
-            <p class="terminal-state">Taking shape<span class="cursor"></span></p>
+        <div class="desk">
+          <span class="bubble mono" aria-hidden="true">mrrp.</span>
+          <svg class="fuba pixels" viewBox="0 0 18 12" role="img" aria-label="Fubá, Thaera’s orange pixel cat, sitting on the terminal" tabindex="0">
+            <title>Fubá</title>
+            <g fill="#B86D3E"><rect x="3" y="0" width="1" height="1"/><rect x="11" y="0" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="10" y="1" width="1" height="1"/><rect x="12" y="1" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="5" y="2" width="5" height="1"/><rect x="12" y="2" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/></g><g fill="#FFE0AC"><rect x="3" y="1" width="1" height="1"/><rect x="11" y="1" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="4" y="5" width="3" height="1"/><rect x="8" y="5" width="3" height="1"/><rect x="5" y="6" width="2" height="1"/><rect x="8" y="6" width="2" height="1"/><rect x="3" y="11" width="3" height="1"/><rect x="9" y="11" width="3" height="1"/></g><g fill="#E9A05B"><rect x="3" y="2" width="2" height="1"/><rect x="10" y="2" width="2" height="1"/><rect x="2" y="3" width="11" height="1"/><rect x="2" y="4" width="2" height="1"/><rect x="5" y="4" width="2" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="10" y="4" width="3" height="1"/><rect x="2" y="5" width="2" height="1"/><rect x="11" y="5" width="2" height="1"/><rect x="3" y="6" width="2" height="1"/><rect x="10" y="6" width="2" height="1"/><rect x="3" y="10" width="3" height="1"/><rect x="9" y="10" width="3" height="1"/></g><g fill="#362831"><rect x="4" y="4" width="1" height="1"/><rect x="9" y="4" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/></g>
+            <g class="tail-a"><g fill="#E9A05B"><rect x="4" y="7" width="7" height="1"/><rect x="4" y="8" width="7" height="1"/><rect x="15" y="8" width="1" height="1"/><rect x="3" y="9" width="3" height="1"/><rect x="7" y="9" width="1" height="1"/><rect x="9" y="9" width="6" height="1"/></g><g fill="#B86D3E"><rect x="15" y="7" width="1" height="1"/><rect x="3" y="8" width="1" height="1"/><rect x="11" y="8" width="1" height="1"/><rect x="14" y="8" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/><rect x="8" y="9" width="1" height="1"/></g></g>
+            <g class="tail-b"><g fill="#E9A05B"><rect x="4" y="7" width="7" height="1"/><rect x="4" y="8" width="7" height="1"/><rect x="3" y="9" width="3" height="1"/><rect x="7" y="9" width="1" height="1"/><rect x="9" y="9" width="5" height="1"/></g><g fill="#B86D3E"><rect x="3" y="8" width="1" height="1"/><rect x="11" y="8" width="1" height="1"/><rect x="15" y="8" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/><rect x="8" y="9" width="1" height="1"/><rect x="14" y="9" width="1" height="1"/></g></g>
+            <g class="lids"><g fill="#B86D3E"><rect x="4" y="4" width="1" height="1"/><rect x="9" y="4" width="1" height="1"/></g></g>
+          </svg>
+          <div class="terminal mono" role="img" aria-label="An illustrative Thaera terminal. You ask it to find a way in; Thaera sends the squad and reports three leads, one of them spicy.">
+            <div class="terminal-bar" aria-hidden="true">
+              <i></i><i></i><i></i><span>thaera / preview</span>
+            </div>
+            <div class="terminal-body" aria-hidden="true">
+              <p><span class="prompt">❯</span> thaera</p>
+              <p class="you">› find me a way in</p>
+              <p class="reply"><b>◆</b> on it. sending the squad.</p>
+              <p class="reply"><b>◆</b> 3 leads. <span class="spicy">1 looks spicy.</span></p>
+              <p class="reply"><b>◆</b> checking it properly<span class="cursor"></span></p>
+            </div>
           </div>
         </div>
       </main>
 
       <footer>
-        <span>Thaera · A work in progress.</span>
-        <span class="footer-note mono">Built with intention.</span>
+        <span>Thaera · for things you’re allowed to break.</span>
+        <span class="footer-note mono">Fubá approves this message.</span>
       </footer>
     </div>
   </body>
